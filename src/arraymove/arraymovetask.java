@@ -1,7 +1,8 @@
-package com.company;
+package arraymove;
 
-public class Main {
+import com.example.Task;
 
+public class arraymovetask implements Task {
     private static void printArray(int[][] arrayForPrint) {
         for (int i = 0; i < arrayForPrint.length; i++) {
             for (int j = 0; j < arrayForPrint.length; j++) {
@@ -14,17 +15,17 @@ public class Main {
     private static int[][] generateArray(int size) {
         int[][] outputArray = new int[size][size];
         int k = 1;
-            for (int i = 0; i < outputArray.length; i++) {
-                for (int j = 0; j < outputArray.length; j++) {
-                    outputArray[i][j] = k;
-                    k++;
-                }
+        for (int i = 0; i < outputArray.length; i++) {
+            for (int j = 0; j < outputArray.length; j++) {
+                outputArray[i][j] = k;
+                k++;
             }
+        }
 
         return outputArray;
     }
 
-    public static void main(String[] args) {
+    public  void runTask () {
         int[][] array = generateArray(4);
         int arrayHalfLength = (array.length)/2 ;
         printArray(array);
@@ -55,9 +56,9 @@ public class Main {
             for (int i = 0; i < bubbleArray.length; i++){
                 for (int j = 0; j < bubbleArray.length; j++) {
 
-                   if ( i == arrayHalfLength  || j == arrayHalfLength  ) {
-                       bubbleArray[i][j] = array[i][j];
-                   }
+                    if ( i == arrayHalfLength  || j == arrayHalfLength  ) {
+                        bubbleArray[i][j] = array[i][j];
+                    }
 
 
                     if (i < arrayHalfLength && j < arrayHalfLength) {
@@ -77,7 +78,8 @@ public class Main {
                 }
             }
         }
-            printArray(bubbleArray);
+        printArray(bubbleArray);
     }
+
 
 }
