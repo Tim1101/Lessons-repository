@@ -10,6 +10,7 @@ public class invertnumbertask  implements  Task {
         while (num != 0) {
             invertnum = invertnum * 10 + (num % 10);
             num = num / 10;
+            num = num + 1;
 
         }
         System.out.println(invertnum);
