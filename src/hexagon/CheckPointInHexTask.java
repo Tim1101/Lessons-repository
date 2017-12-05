@@ -2,7 +2,7 @@ package hexagon;
 
 import java.util.Scanner;
 import com.example.Task;
-public class CheckPointInHexTask implements Task {
+public class CheckPointInHexTask  implements Task {
 
 
     public  void runTask() {
