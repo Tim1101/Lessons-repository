@@ -7,7 +7,7 @@ public class sortingtwomassivetask  implements Task{
     public void runTask() {
         int n = 5;
         int m = 5;
-        int firstArray[] = {2,4,3,1,5};
+        int firstArray[] = {4, 3, 9, 2, 10};
         for (int i = 0; i < firstArray.length; i++){
 //            firstArray[i] = (int)(Math.random() * 20);
             System.out.print(firstArray[i] + "  ");
@@ -21,7 +21,7 @@ public class sortingtwomassivetask  implements Task{
         System.out.println();
         System.out.println();
 
-        int secondArray[] =  {7,10,8,9,6};
+        int secondArray[] =  {5, 8, 1, 6, 7};
         for (int i = 0; i < firstArray.length; i++){
 //            secondArray[i] = (int)(Math.random() * 20);
             System.out.print(secondArray[i] + "  ");
@@ -38,17 +38,15 @@ public class sortingtwomassivetask  implements Task{
 
         int bubbleArray[] = new int[n + m];
         for (int i = 0; i <bubbleArray.length/2; i++) {
-            if (firstArray[i]>secondArray[i]) {
-                bubbleArray[i+i] = secondArray[i];
-                bubbleArray[i+i+1] = firstArray[i];
-            } else {
+            if (firstArray[i]<secondArray[i]) {
                 bubbleArray[i+i] = firstArray[i];
-                bubbleArray[i+i+1] = secondArray[i];
-
             }
-
-
-
+            else {
+                bubbleArray[i+i] = secondArray[i];
+            }
+        }
+        for (int i = 0; i < bubbleArray.length/2; i++){
+            if ()
         }
         System.out.println(Arrays.toString(bubbleArray));
 
