@@ -36,19 +36,39 @@ public class sortingtwomassivetask  implements Task{
         System.out.println();
         System.out.println();
 
+
+
         int bubbleArray[] = new int[n + m];
-        for (int i = 0; i <bubbleArray.length/2; i++) {
-            if (firstArray[i]<secondArray[i]) {
-                bubbleArray[i+i] = firstArray[i];
+        int i = 0;
+        int j = 0;
+        int index = 0;
+
+        while ( i < n &&  j > m){
+            if ( firstArray[i] > secondArray[i]){
+                bubbleArray[index] = firstArray[i];
+                i++;
             }
             else {
-                bubbleArray[i+i] = secondArray[i];
+                bubbleArray[index] = secondArray[j];
+                j++;
             }
+            while (i < n){
+                bubbleArray[index] = firstArray[i];
+                index++;
+                i++;
+            }
+            while (j < m) {
+                bubbleArray[index] = secondArray[i];
+                index++;
+                j++;
+            }
+             for (int k = 0; k < n + m; k++){
+                System.out.print(bubbleArray[k] + "  ");
+             }
+
         }
-        for (int i = 0; i < bubbleArray.length/2; i++){
-            if ()
-        }
-        System.out.println(Arrays.toString(bubbleArray));
+
+
 
         System.out.println();
 
