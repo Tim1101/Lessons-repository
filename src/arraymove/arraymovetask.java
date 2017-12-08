@@ -25,7 +25,7 @@ public class arraymovetask implements Task {
         return outputArray;
     }
 
-    public  void runTask () {
+    public int[] runTask () {
         int[][] array = generateArray(4);
         int arrayHalfLength = (array.length)/2 ;
         printArray(array);
@@ -79,6 +79,7 @@ public class arraymovetask implements Task {
             }
         }
         printArray(bubbleArray);
+        return new int[0];
     }
 
 

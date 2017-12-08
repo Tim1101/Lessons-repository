@@ -4,7 +4,7 @@ import com.example.Task;
 
 public class invertnumbertask  implements  Task {
 
-    public void runTask() {
+    public int[] runTask() {
         int num = 12345;
         int invertnum = 0;
         while (num != 0) {
@@ -14,5 +14,6 @@ public class invertnumbertask  implements  Task {
 
         }
         System.out.println(invertnum);
+        return new int[0];
     }
 }

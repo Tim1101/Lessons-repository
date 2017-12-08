@@ -5,7 +5,7 @@ import com.example.Task;
 public class CheckPointInHexTask  implements Task {
 
 
-    public  void runTask() {
+    public int[] runTask() {
 
         Scanner sc = new Scanner (System.in);
         System.out.println("Please enter the coordinate of point");
@@ -22,6 +22,7 @@ public class CheckPointInHexTask  implements Task {
         boolean CheckResult = inHexagon.isPointHexagon(pointForCheck);
 
         System.out.println( CheckResult);
+        return new int[0];
     }
 
 }

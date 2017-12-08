@@ -2,14 +2,13 @@ package generatenumber;
 
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.ArrayList;
-import java.util.List;
+
 import com.example.Task;
 
 
 public class generatenumbertask implements Task {
 
-    public  void runTask () {
+    public int[] runTask () {
         Scanner sc = new Scanner(System.in);
         long n;
         do {
@@ -23,6 +22,7 @@ public class generatenumbertask implements Task {
             printPrimes();
         }
 
+        return new int[0];
     }
 
     static boolean[] primes;
