@@ -55,7 +55,7 @@ public class sortingtwomassivetask  implements Task{
             j++;
             index++;
         }
-
+       asasasa;
 
 //        while (i < firstArray.length && j < secondArray.length) {
 //            if (firstArray[i] < secondArray[j]) {
