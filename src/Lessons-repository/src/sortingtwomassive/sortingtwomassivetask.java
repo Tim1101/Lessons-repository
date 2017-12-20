@@ -5,7 +5,7 @@ public class sortingtwomassivetask  implements Task{
 
     public int[] runTask() {
 
-        int firstArray[] = {1, 5, 2, 4, 3};
+        int firstArray[] = {1, 1, 2, 2, 6, 6, 8, 8};
         for (int i = 0; i < firstArray.length; i++) {
             //firstArray[i] = (int)(Math.random() * 20);
             System.out.print(firstArray[i] + "  ");
@@ -19,7 +19,7 @@ public class sortingtwomassivetask  implements Task{
         System.out.println();
         System.out.println();
 
-        int secondArray[] = {6, 8, 7, 9, 10};
+        int secondArray[] = {1, 4, 4, 5, 5, 5, 5, 9};
         for (int i = 0; i < firstArray.length; i++) {
             //secondArray[i] = (int)(Math.random() * 20);
             System.out.print(secondArray[i] + "  ");
@@ -40,7 +40,7 @@ public class sortingtwomassivetask  implements Task{
         int j = 0;
         int index = 0;
 
-        while ((i < firstArray.length && j < secondArray.length) && (i < firstArray.length)){
+        while (i < firstArray.length && j < secondArray.length) {
             if (firstArray[i] < secondArray[j]) {
                 bubbleArray[index] = firstArray[i];
                 i++;
@@ -50,42 +50,23 @@ public class sortingtwomassivetask  implements Task{
             }
             index++;
         }
+        while (i < firstArray.length) {
+            bubbleArray[index] = firstArray[i];
+            i++;
+            index++;
+        }
         while (j < secondArray.length) {
             bubbleArray[index] = secondArray[j];
             j++;
             index++;
         }
-       asasasa;
-        efwafafasdfsad;
 
-
-//        while (i < firstArray.length && j < secondArray.length) {
-//            if (firstArray[i] < secondArray[j]) {
-//                bubbleArray[index] = firstArray[i];
-//                i++;
-//            } else {
-//                bubbleArray[index] = secondArray[j];
-//                j++;
-//            }
-//            index++;
-//        }
-//        while (i < firstArray.length) {
-//            bubbleArray[index] = firstArray[i];
-//            i++;
-//            index++;
-//        }
-//        while (j < secondArray.length) {
-//            bubbleArray[index] = secondArray[j];
-//            j++;
-//            index++;
-//        }
-//
         for (int p = 0; p < bubbleArray.length; p++){
             System.out.print(bubbleArray[p]+ "  ");
         }
 
+        return bubbleArray;
 
-      return bubbleArray;
     }
 
    static public void bubbleSort(int[] arr) {
