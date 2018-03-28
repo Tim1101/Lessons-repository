@@ -5,12 +5,13 @@ import hexagon.CheckPointInHexTask;
 import generatenumber.generatenumbertask;
 import invertnumber.invertnumbertask;
 import  sortingtwomassive.sortingtwomassivetask;
+import CarRegister.carregistrationtask;
 
 
 public class Main {
 
     public static void main(String[] args) {
-        Task task = new sortingtwomassivetask();
+        Task task = new carregistrationtask();
         task.runTask();
 
 
