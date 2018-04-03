@@ -1,46 +1,20 @@
 package CarRegister;
 
 import com.example.Task;
-import com.sun.source.util.Trees;
 
 import java.util.*;
 
 public class carregistrationtask implements Task {
     public int[] runTask() {
-        Person();
-        Split();
-//      Car();
-//      NumberOfCar();
-
+        Persons();
 
         return new int[0];
     }
-    public static void Split(){
-//        String Str = new String("Разделяем эту строку на слова");
-//
-//        for (String retval : Str.split(" ")) {
-//            System.out.println(retval);
-//        }
-//        String pattern = "\\s+ |,\\s*";
-//        String inputString = " dsds, dsds,  ds, ds  dsd, sdwd";
-//        String[] splitResult = inputString.split(pattern);
-//        System.out.println(Arrays.toString(splitResult));
-    }
 
 
 
-//
-//    public class Car {
-//        private String name;
-//        public Car(String value) {name = value;}
-//        String getName() {
-//            return name;
-//        }
-//    }
+        public void Persons() {
 
-
-
-         public static void Person() {
             LinkedList<String> persons = new LinkedList<String>();
             persons.add(0, "Mike, A102BC, Nissan ");
             persons.add(1, "Alex, M283HE, BMW  ");
@@ -48,12 +22,26 @@ public class carregistrationtask implements Task {
             persons.add(3, "Kate, T654EE, Jeep  ");
 //        persons.remove(1);
             System.out.println(persons);
+            Scanner sc = new Scanner(System.in);
+            String cm;
+            if(sc.hasNextInt()) {
+                cm = sc.nextLine(); //
+                System.out.println();
+            }
+//            Scanner sc = new Scanner(System.in);
+//            String cm;
+//            cm = sc.nextLine();
+//            do {
+//                persons.removeLast();
+//            }
+//            while (cm == persons.remove());
+
+
+
+
+
 
         }
-
-
-    public static void Delete() {
-
 
     }
 
@@ -64,5 +52,7 @@ public class carregistrationtask implements Task {
 
 
 
-}
+
+
+
 
