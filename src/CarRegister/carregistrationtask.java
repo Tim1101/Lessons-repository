@@ -25,7 +25,8 @@ public class carregistrationtask implements Task {
     public static void Person() {
         LinkedList<String> persons = new LinkedList<String>();
         Scanner sc = new Scanner(System.in);
-        String cmd = sc.nextLine();
+        String delete = sc.nextLine();
+        String add = sc.nextLine();
         System.out.println("Please enter the command");
         persons.add(0, "Mike, A102BC, Nissan ");
         persons.add(1, "Alex, M283HE, BMW  ");
@@ -34,15 +35,30 @@ public class carregistrationtask implements Task {
 //      persons.remove(1);
 
 
-        for (int i = 0; i < persons.size(); i++){
-            if (cmd == sc.nextLine()){
-                persons.removeLast();
+//        for (int i = 0; i < persons.size(); i++){
+//            if (delete == sc.nextLine()){
+//                persons.remove(2);
+//            }
+//            if (add == sc.nextLine()){
+//                persons.addLast("Lion, P987MA, Fiat");
+//            }
+//        }
+        System.out.println(persons);
+
+        public static void Add(){
+            for (int i = 0; i < persons.size(); i ++){
+
+
             }
         }
-        System.out.print(persons);
-
-
     }
+//
+
+
+
+
+
+
 
     public static void Delete(){
 
