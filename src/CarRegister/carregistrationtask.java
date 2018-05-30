@@ -21,6 +21,8 @@ public class carregistrationtask implements Task {
         persons.add(1, "Alex, M283HE, BMW  ");
         persons.add(2, "Jack, O987AA, LADA ");
         persons.add(3, "Kate, T654EE, Jeep  ");
+        persons.add(4, "Tom, H642TT, BMW");
+
 
 
 
@@ -30,6 +32,10 @@ public class carregistrationtask implements Task {
 //            persons.add(element);
 //        }
 //        System.out.println(persons);
+//        for ( int i = 0; i < persons.size(); i++ ){
+//            LinkedList<String> persons5 = new LinkedList<String>(persons.subList(4,5));
+//            System.out.println(persons5);
+//        }
 
         LinkedList<String> persons1 = new LinkedList<String>(persons.subList(0, 1));
 //      persons1.remove(0);
@@ -41,6 +47,7 @@ public class carregistrationtask implements Task {
         LinkedList<String> persons4 = new LinkedList<String>(persons.subList(3, 4));
         System.out.println(persons4);
 
+//
 //        for (int i = 0; i < persons.size(); i ++){
 //            if (persons.size() == 4){
 //                System.out.println("Please enter the command");
@@ -49,14 +56,14 @@ public class carregistrationtask implements Task {
 //        }
 
 
-
+//
 //       if (add == sc.nextLine()){
 //            persons.add(4, "Bob, E832MM, Gelly");
 //            LinkedList<String> persons5 = new LinkedList<String>(persons.subList(4, 5));
 //            System.out.println(persons5);
 //        }
 
-
+//
 //        LinkedList<String> list = new LinkedList<String>();
 //        Scanner input = new Scanner(System.in);
 //        Scanner ppl = new Scanner(System.in);
