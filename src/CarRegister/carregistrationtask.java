@@ -94,15 +94,22 @@ import java.util.*;
 //            System.out.println(list.get(i));
 //        }
 
-            public class TestFrame extends JFrame {
-        private int i = 0;
+
+
+
+public class carregistrationtask implements Task {
+    public int[] runTask() {
+        return new int[0];
+
+        public class TestFrame extends JFrame {
+            private int i = 0;
 
             public TestFrame() {
-                super ("Text Window");
+                super("Text Window");
                 setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                JPanel mainPanel =  new JPanel();
-                mainPanel.setLayout(new BorderLayout(5,5));
-                mainPanel.setBorder(5,5,5,5);
+                JPanel mainPanel = new JPanel();
+                mainPanel.setLayout(new BorderLayout(5, 5));
+                mainPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 
                 final DefaultListModel listModel = new DefaultListModel();
 
@@ -115,12 +122,12 @@ import java.util.*;
                 mainPanel.add(new JScrollPane(list), BorderLayout.CENTER);
 
                 JPanel buttonsPanel = new JPanel();
-                buttonsPanel.setLayout(new GridLayout(1,2,5,0));
+                buttonsPanel.setLayout(new GridLayout(1, 2, 5, 0));
                 mainPanel.add(buttonsPanel, BorderLayout.SOUTH);
 
                 JButton addButton = new JButton("Add");
                 addButton.setFocusable(false);
-                addButton.addActionListener(new ActionListener(){
+                addButton.addActionListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e) {
                         String element = "element of list" + i++;
                         listModel.addElement(element);
@@ -144,10 +151,9 @@ import java.util.*;
 
                 list.addListSelectionListener(new ListSelectionListener() {
                     public void valueChanged(ListSelectionEvent e) {
-                        if (list.getSelectedIndex() >= 0){
+                        if (list.getSelectedIndex() >= 0) {
                             removeButton.setEnabled(true);
-                        }
-                        else {
+                        } else {
                             removeButton.setEnabled(false);
                         }
                     }
@@ -174,10 +180,9 @@ import java.util.*;
             }
 
 
+        }
 
     }
-
-
 //}
 
 
