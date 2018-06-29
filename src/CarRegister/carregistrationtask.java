@@ -6,6 +6,8 @@ import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+
 import javax.swing.BorderFactory;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
@@ -101,10 +103,10 @@ public class carregistrationtask implements Task {
     public int[] runTask() {
         return new int[0];
 
-        public class TestFrame extends JFrame {
+        public class carregistrationtask extends JFrame {
             private int i = 0;
 
-            public TestFrame() {
+            public carregistrationtask() {
                 super("Text Window");
                 setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 JPanel mainPanel = new JPanel();
@@ -113,9 +115,10 @@ public class carregistrationtask implements Task {
 
                 final DefaultListModel listModel = new DefaultListModel();
 
-                for (i = 0; i < 25; i++) {
-                    listModel.addElement("New element");
+                for (int i = 0; i < 30; i++){
+                    listModel.addElement("add new element");
                 }
+
                 final JList list = new JList(listModel);
                 list.setSelectedIndex(0);
                 list.setFocusable(false);
@@ -174,15 +177,17 @@ public class carregistrationtask implements Task {
                     @Override
                     public void run() {
                         JFrame.setDefaultLookAndFeelDecorated(true);
-                        new TestFrame();
+                        new carregistrationtask();
                     }
                 });
             }
 
 
-        }
 
+
+        }
     }
+}
 //}
 
 
