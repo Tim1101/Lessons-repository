@@ -6,6 +6,7 @@ import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.font.*;
 
 
 import javax.swing.BorderFactory;
@@ -102,8 +103,8 @@ import java.util.*;
 public class carregistrationtask implements Task {
     public int[] runTask() {
         return new int[0];
-
-        public class carregistrationtask extends JFrame {
+    
+       public class carregistrationtask extends JFrame {
             private int i = 0;
 
             public carregistrationtask() {
