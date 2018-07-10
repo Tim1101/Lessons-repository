@@ -103,7 +103,7 @@ import java.util.*;
 public class carregistrationtask implements Task {
     public int[] runTask() {
         return new int[0];
-    
+
        public class carregistrationtask extends JFrame {
             private int i = 0;
 
@@ -141,6 +141,16 @@ public class carregistrationtask implements Task {
                     }
                 });
                 buttonsPanel.add(addButton);
+
+                JButton historyButton = new JButton("history");
+                historyButton.setFocusable(false);
+                historyButton.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+
+                    }
+                });
+                buttonsPanel.add(historyButton);
 
 
                 final JButton removeButton = new JButton("Delete");
