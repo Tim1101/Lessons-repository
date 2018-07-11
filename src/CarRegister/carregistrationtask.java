@@ -21,6 +21,8 @@ import javax.swing.event.ListSelectionListener;
 
 import java.util.*;
 
+
+
 //public class carregistrationtask implements Task {
 //    public int[] runTask() {
 //        ();
@@ -98,8 +100,6 @@ import java.util.*;
 //        }
 
 
-
-
 public class carregistrationtask implements Task {
     public int[] runTask() {
         return new int[0];
@@ -120,6 +120,7 @@ public class carregistrationtask implements Task {
                     listModel.addElement("add new element");
                 }
 
+
                 final JList list = new JList(listModel);
                 list.setSelectedIndex(0);
                 list.setFocusable(false);
@@ -129,9 +130,11 @@ public class carregistrationtask implements Task {
                 buttonsPanel.setLayout(new GridLayout(1, 2, 5, 0));
                 mainPanel.add(buttonsPanel, BorderLayout.SOUTH);
 
+
                 JButton addButton = new JButton("Add");
                 addButton.setFocusable(false);
                 addButton.addActionListener(new ActionListener() {
+                    @Override
                     public void actionPerformed(ActionEvent e) {
                         String element = "element of list" + i++;
                         listModel.addElement(element);
@@ -142,20 +145,21 @@ public class carregistrationtask implements Task {
                 });
                 buttonsPanel.add(addButton);
 
-                JButton historyButton = new JButton("history");
+                JButton historyButton = new JButton("history of all list");
                 historyButton.setFocusable(false);
                 historyButton.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
+                  @Override
+                    public void actionPerformed(ActionEvent e){
 
-                    }
+
+                  }
                 });
-                buttonsPanel.add(historyButton);
 
 
                 final JButton removeButton = new JButton("Delete");
                 removeButton.setFocusable(false);
                 removeButton.addActionListener(new ActionListener() {
+                    @Override
                     public void actionPerformed(ActionEvent e) {
                         listModel.remove(list.getSelectedIndex());
                     }
@@ -192,6 +196,7 @@ public class carregistrationtask implements Task {
                     }
                 });
             }
+
 
 
 
