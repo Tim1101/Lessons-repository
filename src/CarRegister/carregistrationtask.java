@@ -104,10 +104,10 @@ public class carregistrationtask implements Task {
     public int[] runTask() {
         return new int[0];
 
-       public class carregistrationtask extends JFrame {
+        class carregistrationtask1 extends JFrame {
             private int i = 0;
 
-            public carregistrationtask() {
+            public carregistrationtask1() {
                 super("Text Window");
                 setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 JPanel mainPanel = new JPanel();
@@ -116,10 +116,10 @@ public class carregistrationtask implements Task {
 
                 final DefaultListModel listModel = new DefaultListModel();
 
-                for (int i = 0; i < 30; i++){
+                for (int i = 0; i < 30; i++) {
                     listModel.addElement("add new element");
-                }
 
+                }
 
                 final JList list = new JList(listModel);
                 list.setSelectedIndex(0);
@@ -127,9 +127,19 @@ public class carregistrationtask implements Task {
                 mainPanel.add(new JScrollPane(list), BorderLayout.CENTER);
 
                 JPanel buttonsPanel = new JPanel();
-                buttonsPanel.setLayout(new GridLayout(1, 2, 5, 0));
+                buttonsPanel.setLayout(new GridLayout(1,2,5,0));
                 mainPanel.add(buttonsPanel, BorderLayout.SOUTH);
 
+
+                JButton historyButton = new JButton("history of all list");
+                historyButton.setFocusable(false);
+                historyButton.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+
+
+                    }
+                });
 
                 JButton addButton = new JButton("Add");
                 addButton.setFocusable(false);
@@ -145,15 +155,16 @@ public class carregistrationtask implements Task {
                 });
                 buttonsPanel.add(addButton);
 
-                JButton historyButton = new JButton("history of all list");
-                historyButton.setFocusable(false);
-                historyButton.addActionListener(new ActionListener() {
-                  @Override
-                    public void actionPerformed(ActionEvent e){
+                JButton saveButton = new JButton("Save");
+                saveButton.setFocusable(false);
+                saveButton.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
 
-
-                  }
+                    }
                 });
+                buttonsPanel.add(saveButton);
+
 
 
                 final JButton removeButton = new JButton("Delete");
@@ -167,16 +178,18 @@ public class carregistrationtask implements Task {
                 buttonsPanel.add(removeButton);
 
 
+
                 list.addListSelectionListener(new ListSelectionListener() {
+                    @Override
                     public void valueChanged(ListSelectionEvent e) {
-                        if (list.getSelectedIndex() >= 0) {
+                        if (list.getSelectedIndex() >= 0){
                             removeButton.setEnabled(true);
-                        } else {
+                        }
+                        else {
                             removeButton.setEnabled(false);
                         }
                     }
                 });
-
 
                 getContentPane().add(mainPanel);
 
@@ -185,20 +198,18 @@ public class carregistrationtask implements Task {
                 setLocationRelativeTo(null);
                 setVisible(true);
 
+
             }
 
-            public static void main(String[] args) {
+            public void main(String[] args) {
                 javax.swing.SwingUtilities.invokeLater(new Runnable() {
                     @Override
                     public void run() {
                         JFrame.setDefaultLookAndFeelDecorated(true);
-                        new carregistrationtask();
+                        new carregistrationtask1();
                     }
                 });
             }
-
-
-
 
 
         }

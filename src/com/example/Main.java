@@ -11,7 +11,7 @@ import CarRegister.carregistrationtask;
 public class Main {
 
     public static void main(String[] args) {
-        Task task = new run();
+        Task task = new carregistrationtask();
         task.runTask();
 
 
