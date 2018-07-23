@@ -9,13 +9,7 @@ import java.awt.event.ActionListener;
 import java.awt.font.*;
 
 
-import javax.swing.BorderFactory;
-import javax.swing.DefaultListModel;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JList;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
+import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
@@ -104,21 +98,22 @@ public class carregistrationtask implements Task {
     public int[] runTask() {
         return new int[0];
 
-        class carregistrationtask1 extends JFrame {
+        class carregistrationtask extends JFrame {
             private int i = 0;
 
             public carregistrationtask1() {
-                super("Text Window");
+
+                super("Тестовое окно");
                 setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
                 JPanel mainPanel = new JPanel();
                 mainPanel.setLayout(new BorderLayout(5, 5));
                 mainPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 
                 final DefaultListModel listModel = new DefaultListModel();
 
-                for (int i = 0; i < 30; i++) {
-                    listModel.addElement("add new element");
-
+                for (i = 0; i < 25; i++) {
+                    listModel.addElement("Элемент списка " + i);
                 }
 
                 final JList list = new JList(listModel);
@@ -127,26 +122,14 @@ public class carregistrationtask implements Task {
                 mainPanel.add(new JScrollPane(list), BorderLayout.CENTER);
 
                 JPanel buttonsPanel = new JPanel();
-                buttonsPanel.setLayout(new GridLayout(1,2,5,0));
+                buttonsPanel.setLayout(new GridLayout(1, 2, 5, 0));
                 mainPanel.add(buttonsPanel, BorderLayout.SOUTH);
 
-
-                JButton historyButton = new JButton("history of all list");
-                historyButton.setFocusable(false);
-                historyButton.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-
-
-                    }
-                });
-
-                JButton addButton = new JButton("Add");
+                JButton addButton = new JButton("Добавить");
                 addButton.setFocusable(false);
                 addButton.addActionListener(new ActionListener() {
-                    @Override
                     public void actionPerformed(ActionEvent e) {
-                        String element = "element of list" + i++;
+                        String element = "Элемент списка " + i++;
                         listModel.addElement(element);
                         int index = listModel.size() - 1;
                         list.setSelectedIndex(index);
@@ -155,37 +138,30 @@ public class carregistrationtask implements Task {
                 });
                 buttonsPanel.add(addButton);
 
-                JButton saveButton = new JButton("Save");
-                saveButton.setFocusable(false);
-                saveButton.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-
-                    }
-                });
-                buttonsPanel.add(saveButton);
-
-
-
-                final JButton removeButton = new JButton("Delete");
+                final JButton removeButton = new JButton("Удалить");
                 removeButton.setFocusable(false);
                 removeButton.addActionListener(new ActionListener() {
-                    @Override
                     public void actionPerformed(ActionEvent e) {
                         listModel.remove(list.getSelectedIndex());
                     }
                 });
                 buttonsPanel.add(removeButton);
 
+                JButton historyButton = new JButton("Show the history");
+                historyButton.setFocusable(false);
+                historyButton.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
 
+                    }
+                });
+                buttonsPanel.add(historyButton);
 
                 list.addListSelectionListener(new ListSelectionListener() {
-                    @Override
                     public void valueChanged(ListSelectionEvent e) {
-                        if (list.getSelectedIndex() >= 0){
+                        if (list.getSelectedIndex() >= 0) {
                             removeButton.setEnabled(true);
-                        }
-                        else {
+                        } else {
                             removeButton.setEnabled(false);
                         }
                     }
@@ -193,29 +169,25 @@ public class carregistrationtask implements Task {
 
                 getContentPane().add(mainPanel);
 
-                setPreferredSize(new Dimension(260, 220));
+                setPreferredSize(new Dimension(260,220));
                 pack();
                 setLocationRelativeTo(null);
                 setVisible(true);
-
 
             }
 
             public void main(String[] args) {
                 javax.swing.SwingUtilities.invokeLater(new Runnable() {
-                    @Override
                     public void run() {
                         JFrame.setDefaultLookAndFeelDecorated(true);
-                        new carregistrationtask1();
+                        new carregistrationtask();
                     }
                 });
             }
 
-
         }
     }
 }
-//}
 
 
 
