@@ -6,7 +6,6 @@ import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Scanner;
 
 
 import javax.swing.*;
@@ -128,10 +127,7 @@ import javax.swing.event.ListSelectionListener;
             addButton.setFocusable(false);
             addButton.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
-                    Scanner sc = new Scanner(System.in);
-                    String n;
-                    n = sc.nextLine();
-                    String element = n;
+                    String element = "Элемент списка " + i++;
                     listModel.addElement(element);
                     int index = listModel.size() - 1;
                     list.setSelectedIndex(index);
