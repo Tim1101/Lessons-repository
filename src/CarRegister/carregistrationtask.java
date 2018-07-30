@@ -122,12 +122,14 @@ import javax.swing.event.ListSelectionListener;
             JPanel buttonsPanel = new JPanel();
             buttonsPanel.setLayout(new GridLayout(1, 2, 5, 0));
             mainPanel.add(buttonsPanel, BorderLayout.SOUTH);
+            
 
-            JButton addButton = new JButton("Добавить");
+            JButton addButton = new JButton("Add");
             addButton.setFocusable(false);
             addButton.addActionListener(new ActionListener() {
+                @Override
                 public void actionPerformed(ActionEvent e) {
-                    String element = "Элемент списка " + i++;
+                    String element = "Element of list" + i++;
                     listModel.addElement(element);
                     int index = listModel.size() - 1;
                     list.setSelectedIndex(index);
